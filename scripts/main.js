@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     teamMembers.forEach(member => {
         member.addEventListener('click', function () {
-            alert(`You clicked on ${this.querySelector('h4').textContent}`);
+            alert(`You clicked on ₹${this.querySelector('h4').textContent}`);
         });
     });
 });
@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getProductById(id) {
         const products = [
-            { id: '1', name: 'Product Name 1', price: 29.99 },
-            { id: '2', name: 'Product Name 2', price: 49.99 },
-            { id: '3', name: 'Product Name 3', price: 19.99 }
+            { id: '1', name: 'Product Name 1', price: 1999 },
+            { id: '2', name: 'Product Name 2', price: 1499 },
+            { id: '3', name: 'Product Name 3', price: 899 }
             // Add more products as needed
         ];
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="quantity">
                     <input type="number" value="${item.quantity}" min="1" data-index="${index}">
                 </div>
-                <p class="price">$${(item.price * item.quantity).toFixed(2)}</p>
+                <p class="price">₹${(item.price * item.quantity).toFixed(2)}</p>
                 <button class="remove-btn" data-index="${index}">Remove</button>
             `;
 
